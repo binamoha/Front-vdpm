@@ -1,0 +1,177 @@
+/* Styles généraux */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300,400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+header img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 10px;
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 7px 14px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  font-weight: 400;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background-color: #333;
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Contenu principal */
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+/* Pied de page */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+/* CSS pour le formulaire de contact */
+
+/* Formulaire de contact */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Champ de saisie */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Bouton d'envoi */
+.contact-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.binta-map iframe {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+}
+
+/* Style pour la page projet */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  margin-top: 0;
+}
+
+.overlay p {
+  margin-bottom: 0;
+}
